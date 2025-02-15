@@ -7,13 +7,7 @@ import sys
 from random import randint
 import time
 
-class Ui_MainWindow(object):
-    def __init__(self, communicator=None):
-        #Custom
-        if communicator:
-            communicator.text_signal.connect(self.log)
-            communicator.diagram_signal.connect(self.add_data_point)
-    
+class Ui_MainWindow(object):    
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("mainwindow")
         MainWindow.resize(800, 600)
